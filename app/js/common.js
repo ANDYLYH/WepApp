@@ -52,4 +52,36 @@ document.addEventListener('DOMContentLoaded',function(){
                    }
 
 	})
+       //顶部菜单栏的个人中心选项，判断此用户是否已注册，若未注册，则跳到注册页面
+        $('.com').on('singleTap',function(){
+                   if(localStorage.getItem('local')){
+                   	
+                   	window.location ='personal_information.html';
+                   }else{
+                   	window.location ='register.html';
+                   }
+
+	})
+     
+     //顶部菜单栏的购物车选项和底部购车按钮，判断此用户是否已注册，若未注册，则跳到注册页面
+     //首页
+        $('.shopCar').on('singleTap',function(){
+                   if(localStorage.getItem('local')){
+                   	
+                   	window.location ='html/shoppingCar.html';
+                   }else{
+                   	window.location ='html/register.html';
+                   }
+
+	})
+    //列表页   ,详情页，
+     $('.com_shoppingcar').on('singleTap',function(){
+                   if(localStorage.getItem('local')){
+                   	
+                   	window.location ='shoppingCar.html';
+                   }else{
+                   	window.location ='register.html';
+                   }
+
+	})
 })

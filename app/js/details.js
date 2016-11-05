@@ -75,8 +75,9 @@
    var bGoods = true;
   
    $btngroud.eq(1).on('singleTap',function(){
- 
-        obj.num = 1;
+   	   //判断此用户是否已注册或登录，如果已登录，则可以添加货物
+        if(localStorage.getItem('local')){
+        	obj.num = 1;
 		GoodsData =localStorage.getItem("GoodsData")? JSON.parse(localStorage.getItem("GoodsData")):[];
 		$.each(GoodsData, function(idx,item){
 			if(item.title == obj.title){
@@ -97,7 +98,11 @@
 		$count.html(AllCount);
     	localStorage.setItem("GoodsData",JSON.stringify(GoodsData))
     	
-    	alert("成功添加商品！")
+    	alert("成功添加商品！");
+        }else{
+           window.location ='register.html';
+        }
+        
     })
  	
  	//获取节点，详情与评论切换
