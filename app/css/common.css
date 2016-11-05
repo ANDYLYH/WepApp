@@ -1,0 +1,84 @@
+a{text-decoration:none;}
+.header_top {display: flex;background-color: #8e488e;width: 100%;height: 48px;box-sizing: border-box;position: fixed;top: 0;left: 0;z-index: 5;}
+.header_top .h_logo{width: 41px;display: flex;}
+.header_top div{flex: 1;display: flex;justify-content: center;font-size: 1.25em;color: #fff;align-items: center;}
+.header_top a i{display:flex;color: #fff;align-items: center;justify-content: center;flex: 1;font-size: 20px;}
+/*菜单*/
+.header_data {
+  height: 48px;
+  /*position: relative;*/
+}
+
+.menu {
+  display: none;
+  width: 124px;
+  height: 228px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  color: red;
+  border-radius: 5px;
+  right: 10px;
+  top: 45px;
+  z-index: 30;
+  border-top: 3px solid rgba(0, 0, 0, 0.6);
+}
+
+.menu ul li {
+  height: 37px;
+  border-bottom: 1px solid darkgray;
+  text-align: center;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 36px;
+  text-align: center;
+  color: darkgray;
+  font-weight: 800;
+}
+
+.menu ul li:last-child {
+  border: none;
+}
+
+.menu::before, .menu::after {
+  content: '';
+  position: absolute;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid rgba(0, 0, 0, 0.6);
+  right: 8px;
+  top: -10px;
+}
+
+
+/*底部*/
+.foot {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  justify-content: flex-start;
+  text-align: center;
+  background: white;
+  /*padding-bottom: 20px;*/
+  padding-right: 8px; }
+  .foot a {
+    text-decoration: none;
+    color: darkslategrey; }
+  .foot a:hover {
+    color: darkorange; }
+  .foot span {
+    flex: 1;
+    color: black; }
+    .foot span dl {
+     margin: 5px 0 0 0;
+      font-size: 18px; }
+      .foot span dl dt {
+        font-size: 14px;
+        color: darkslategray; }

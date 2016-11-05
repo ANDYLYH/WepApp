@@ -1,0 +1,38 @@
+$shengming:rgb(238,238,238);
+$btnColor:dimgray;
+body{background: white;color: darkgrey  ;font-family: "微软雅黑";}
+
+.address{
+    ul {padding-top: 10px;
+        li{display: flex;height: 34px;padding-left: 15px;padding-right: 15px; overflow: hidden;
+          input{flex: 1;text-indent:8px;width: 0px;}
+        }
+    }
+    ul:nth-of-type(1){
+        li{
+            span{color: $btnColor; width: 80px;text-align: center;line-height: 34px;border:1px solid darkgray;border-radius: 5px 0 0 5px;background:$shengming;}
+            input{flex: 3;}
+        }
+    }
+    ul:nth-of-type(2){
+        li{
+            span{color: $btnColor;width: 80px;text-align: center;line-height: 34px;border:1px solid darkgray;border-radius: 5px 0 0 5px;background:$shengming;}
+            input{flex: 3;}
+        }
+    }
+    ul:nth-of-type(3){
+        li{height:176px;
+          span:nth-of-type(1){color: $btnColor;width: 80px;background:$shengming;align-self: flex-start;height: 174px;text-align: center;line-height:174px;border-radius:5px 0 0 5px ;border:1px solid darkgray;}
+          span:nth-of-type(2){ flex: 1;display:flex;flex-direction: column;
+              select{flex: 1; color: darkgray;}
+              input{flex:2;width: auto;}
+          }
+            
+        }
+    }
+    ul:nth-of-type(4){margin-top: 15px;
+        li{
+            button{border: none; flex: 1;background: $shengming;border-radius:5px;background: rgb(142,72,142);color: white;font-size: 16px;}
+        }
+    }
+}

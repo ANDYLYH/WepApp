@@ -1,0 +1,138 @@
+@charset "UTF-8";
+html, body {
+  font-family: '微软雅黑'; }
+
+body {
+  padding-bottom: 150px; }
+a{text-decoration: none;}
+.layout-main {
+  height: 85px;
+  background: url(../img/img005.jpg) no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .layout-main a {
+    text-decoration: none;
+    display: flex;
+    color: white;
+    text-align: left; }
+    .layout-main a span:nth-of-type(1) img {
+      width: 54px;
+      height: 54px;
+      padding-left: 20px;
+      padding-top: 20px; }
+    .layout-main a span:nth-of-type(2) {
+      padding-top: 20px;
+      padding-left: 10px; }
+      .layout-main a span:nth-of-type(2) dt {
+        padding-top: 10px;
+        position: relative; }
+        .layout-main a span:nth-of-type(2) dt b {
+          position: absolute;
+          top: 7px; }
+        .layout-main a span:nth-of-type(2) dt img {
+          width: 15px;
+          height: 15px;
+          padding-right: 15px; }
+  .layout-main .user-money ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    height: 60px;
+    background: white; }
+    .layout-main .user-money ul li {
+      flex: 1;
+      text-align: center; }
+      .layout-main .user-money ul li dl {
+        color: black;
+        font-weight: 700px; }
+        .layout-main .user-money ul li dl dt {
+          font-weight: normal;
+          color: darkgray;
+          font-size: 14px; }
+    .layout-main .user-money ul li:nth-of-type(1) dl, .layout-main .user-money ul li:nth-of-type(2) dl {
+      border-right: 1px solid lavender;
+      height: 46px; }
+  .layout-main .member-leavel, .layout-main .add {
+    margin-top: 10px; }
+    .layout-main .member-leavel ul, .layout-main .add ul {
+      display: flex;
+      background: white;
+      border-bottom: 1px solid lavender; }
+      .layout-main .member-leavel ul li, .layout-main .add ul li {
+        flex: 1;
+        height: 41px;
+        padding-top: 15px;
+        padding-left: 10px; }
+        .layout-main .member-leavel ul li span, .layout-main .add ul li span {
+          border-radius: 50%;
+          padding: 8px;
+          color: white; }
+    .layout-main .member-leavel ul:nth-of-type(1) li:nth-of-type(1) span:nth-of-type(1), .layout-main .add ul:nth-of-type(1) li:nth-of-type(1) span:nth-of-type(1) {
+      background: #fc215e; }
+    .layout-main .member-leavel ul:nth-of-type(1) li:nth-of-type(1) span:nth-of-type(2), .layout-main .add ul:nth-of-type(1) li:nth-of-type(1) span:nth-of-type(2) {
+      color: darkslategrey; }
+    .layout-main .member-leavel ul:nth-of-type(1) li:nth-of-type(2), .layout-main .add ul:nth-of-type(1) li:nth-of-type(2) {
+      text-align: right; }
+      .layout-main .member-leavel ul:nth-of-type(1) li:nth-of-type(2) span:nth-of-type(1), .layout-main .add ul:nth-of-type(1) li:nth-of-type(2) span:nth-of-type(1) {
+        padding: 3px;
+        text-align: center;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #8e488e; }
+      .layout-main .member-leavel ul:nth-of-type(1) li:nth-of-type(2) span:nth-of-type(2), .layout-main .add ul:nth-of-type(1) li:nth-of-type(2) span:nth-of-type(2) {
+        color: darkslategray; }
+    .layout-main .member-leavel ul:nth-of-type(2) li:nth-of-type(1) span:nth-of-type(1), .layout-main .add ul:nth-of-type(2) li:nth-of-type(1) span:nth-of-type(1) {
+      background: #4fc6ee; }
+    .layout-main .member-leavel ul:nth-of-type(2) li:nth-of-type(1) span:nth-of-type(2), .layout-main .add ul:nth-of-type(2) li:nth-of-type(1) span:nth-of-type(2) {
+      color: darkslategrey; }
+    .layout-main .member-leavel ul:nth-of-type(2) li:nth-of-type(2), .layout-main .add ul:nth-of-type(2) li:nth-of-type(2) {
+      text-align: right; }
+      .layout-main .member-leavel ul:nth-of-type(2) li:nth-of-type(2) span:nth-of-type(1), .layout-main .add ul:nth-of-type(2) li:nth-of-type(2) span:nth-of-type(1) {
+        padding: 3px;
+        text-align: center;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #8e488e; }
+      .layout-main .member-leavel ul:nth-of-type(2) li:nth-of-type(2) span:nth-of-type(2), .layout-main .add ul:nth-of-type(2) li:nth-of-type(2) span:nth-of-type(2) {
+        color: darkslategray; }
+    .layout-main .member-leavel ul:nth-of-type(3) li:nth-of-type(1) span:nth-of-type(1), .layout-main .add ul:nth-of-type(3) li:nth-of-type(1) span:nth-of-type(1) {
+      background: #ffa64c; }
+    .layout-main .member-leavel ul:nth-of-type(3) li:nth-of-type(1) span:nth-of-type(2), .layout-main .add ul:nth-of-type(3) li:nth-of-type(1) span:nth-of-type(2) {
+      color: darkslategrey; }
+    .layout-main .member-leavel ul:nth-of-type(3) li:nth-of-type(2), .layout-main .add ul:nth-of-type(3) li:nth-of-type(2) {
+      text-align: right; }
+      .layout-main .member-leavel ul:nth-of-type(3) li:nth-of-type(2) span:nth-of-type(1), .layout-main .add ul:nth-of-type(3) li:nth-of-type(2) span:nth-of-type(1) {
+        padding: 3px;
+        text-align: center;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #8e488e; }
+      .layout-main .member-leavel ul:nth-of-type(3) li:nth-of-type(2) span:nth-of-type(2), .layout-main .add ul:nth-of-type(3) li:nth-of-type(2) span:nth-of-type(2) {
+        color: darkslategray; }
+  .layout-main .add {
+    margin-top: 20px;
+    margin-bottom: 80px; }
+    .layout-main .add ul:nth-of-type(1) li:nth-of-type(2) {
+      text-align: right; }
+      .layout-main .add ul:nth-of-type(1) li:nth-of-type(2) span:nth-of-type(1) {
+        display: none; }
+      .layout-main .add ul:nth-of-type(1) li:nth-of-type(2) span:nth-of-type(2) {
+        color: darkslategray; }
+    .layout-main .add ul:nth-of-type(2) li:nth-of-type(2) {
+      text-align: right; }
+      .layout-main .add ul:nth-of-type(2) li:nth-of-type(2) span:nth-of-type(1) {
+        display: none; }
+      .layout-main .add ul:nth-of-type(2) li:nth-of-type(2) span:nth-of-type(2) {
+        color: darkslategray; }
+    .layout-main .add ul:nth-of-type(3) li:nth-of-type(2) {
+      text-align: right; }
+      .layout-main .add ul:nth-of-type(3) li:nth-of-type(2) span:nth-of-type(1) {
+        display: none; }
+      .layout-main .add ul:nth-of-type(3) li:nth-of-type(2) span:nth-of-type(2) {
+        color: darkslategray; }

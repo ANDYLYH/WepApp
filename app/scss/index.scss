@@ -1,0 +1,28 @@
+body{margin: 0;padding: 0;background: #f1f5f6;font-family: "微软雅黑";}
+ul{list-style: none;margin: 0;padding: 0;}
+img{display: block;}
+header{width: 100%;overflow: hidden;height: 48px;position: fixed;top: 0;left: 0;z-index: 10;}
+header div{width: 100%;background: #8e488e;padding: 13px 0;overflow: hidden;position: relative;}
+header span{font-size: 16px;color: white;}
+header span:first-child{text-align: center;width: 100%;display: block;}
+.icon-sousuo{font-size: 22px;margin-right: 12px;position: absolute;top: 12px;right: 0;}
+.content{margin-top: 54px;}
+.carousel img{width: 100%;height: 24%;}
+.swiper-pagination-bullet {opacity: 0.5;}
+.swiper-pagination-bullet-active{background: #fe6c9c;opacity: 1;}
+.ico_top img{width: 100%;}
+.ico_center{padding: 0.5% 0.2% 0 0;display: flex;flex-wrap: wrap;justify-content: space-around;}
+.ico_center img{margin: 0.5% 0;width: 49%;height: 12%;}
+.ico_bottom img{width: 100%;height: 24%;}
+.index_json li{display: block;width: 98%;height: auto;background: white;padding: 0.6% 1% 1.2% 1%;margin-bottom: 2%;font-size: 1.2%;}
+.index_json img{width: 100%;}
+.index_json .explain{margin: 1% 0 1.4% 0;}
+.index_json .price{color: #f37cbe;font-weight: bold;}
+.backtop a{width: 50px;height: 50px;border-radius: 50%;background: #ef4da6;display: flex;justify-content: center;align-items: center;position: fixed;right: 1%;bottom: 10%;opacity: 0;}
+.backTop{width: 100%;height: 0.1px;background: #8e488e;}
+
+
+
+
+
+

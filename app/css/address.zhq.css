@@ -1,0 +1,76 @@
+@charset "UTF-8";
+body {
+  background: white;
+  color: darkgrey;
+  font-family: "微软雅黑"; }
+
+.address ul {
+  padding-top: 10px; }
+  .address ul li {
+    display: flex;
+    height: 34px;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: hidden; }
+    .address ul li input {
+      flex: 1;
+      text-indent: 8px;
+      width: 0px; }
+
+.address ul:nth-of-type(1) li span {
+  color: dimgray;
+  width: 80px;
+  text-align: center;
+  line-height: 34px;
+  border: 1px solid darkgray;
+  border-radius: 5px 0 0 5px;
+  background: #eeeeee; }
+
+.address ul:nth-of-type(1) li input {
+  flex: 3; }
+
+.address ul:nth-of-type(2) li span {
+  color: dimgray;
+  width: 80px;
+  text-align: center;
+  line-height: 34px;
+  border: 1px solid darkgray;
+  border-radius: 5px 0 0 5px;
+  background: #eeeeee; }
+
+.address ul:nth-of-type(2) li input {
+  flex: 3; }
+
+.address ul:nth-of-type(3) li {
+  height: 176px; }
+  .address ul:nth-of-type(3) li span:nth-of-type(1) {
+    color: dimgray;
+    width: 80px;
+    background: #eeeeee;
+    align-self: flex-start;
+    height: 174px;
+    text-align: center;
+    line-height: 174px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid darkgray; }
+  .address ul:nth-of-type(3) li span:nth-of-type(2) {
+    flex: 1;
+    display: flex;
+    flex-direction: column; }
+    .address ul:nth-of-type(3) li span:nth-of-type(2) select {
+      flex: 1;
+      color: darkgray; }
+    .address ul:nth-of-type(3) li span:nth-of-type(2) input {
+      flex: 2;
+      width: auto; }
+
+.address ul:nth-of-type(4) {
+  margin-top: 15px; }
+  .address ul:nth-of-type(4) li button {
+    border: none;
+    flex: 1;
+    background: #eeeeee;
+    border-radius: 5px;
+    background: #8e488e;
+    color: white;
+    font-size: 16px; }

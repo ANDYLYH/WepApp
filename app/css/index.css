@@ -1,0 +1,110 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  background: #f1f5f6;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  padding-bottom: 60px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.head_img {
+  display: block;
+  margin: 10px 0 0 5px;
+  width: 25px;
+  height: 25px;
+}
+
+
+
+.content {
+  /*margin-top: 47px;*/
+}
+
+.carousel img {
+  width: 100%;
+  height: 24%;
+}
+
+.swiper-pagination-bullet {
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fe6c9c;
+  opacity: 1;
+}
+
+.ico_top img {
+  width: 100%;
+}
+
+.ico_center {
+  padding: 0.5% 0.2% 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.ico_center img {
+  margin: 0.5% 0;
+  width: 49%;
+  height: 12%;
+}
+
+.ico_bottom img {
+  width: 100%;
+  height: 24%;
+}
+
+.index_json li {
+  display: block;
+  width: 98%;
+  height: auto;
+  background: white;
+  padding: 0.6% 1% 1.2% 1%;
+  margin-bottom: 2%;
+  font-size: 0.875em;
+}
+
+.index_json img {
+  width: 100%;
+}
+
+.index_json .explain {
+  margin: 1% 0 1.4% 0;
+}
+
+.index_json .price {
+  color: #f37cbe;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.backtop a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ef4da6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 1%;
+  bottom: 13%;
+  opacity: 0;
+}
+
+.backTop {
+  width: 100%;
+  height: 0.1px;
+  background: #8e488e;
+}
+
+

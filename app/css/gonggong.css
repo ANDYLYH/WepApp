@@ -1,0 +1,25 @@
+/*.foot {
+  height: 35px;
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  justify-content: flex-start;
+  text-align: center;
+  background: white;
+  padding-bottom: 30px;
+  padding-right: 8px; }
+  .foot a {
+    text-decoration: none;
+    color: darkslategrey; }
+  .foot a:hover {
+    color: darkorange; }
+  .foot span {
+    flex: 1;
+    color: black; }
+    .foot span dl {
+      font-size: 18px; }
+      .foot span dl dt {
+        font-size: 14px;
+        color: darkslategray; }*/

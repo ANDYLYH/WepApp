@@ -1,0 +1,221 @@
+@charset "UTF-8";
+body {
+  background: #f1f5f6;
+}
+
+/*主体内容*/
+.content {
+  margin: 0px 0 54px;
+}
+a:hover{text-decoration: none;}
+/*清除padding*/
+.content .dataList .col-xs-1, .content .dataList .col-xs-2, .content .dataList .col-xs-5, .content .dataList .col-xs-3 {
+  padding: 0;
+}
+
+/*商品主要内容*/
+.content .dataList li {
+  background: #fff;
+  overflow: hidden;
+  padding: 10px;
+  border-top: solid #ccc 1px;
+}
+
+/*复选框*/
+.content .dataList li .choice {
+  margin-top: 24px;
+  position: relative;
+
+}
+
+.content .dataList li .choice input:nth-child(n) {
+  position: absolute;
+}
+.content .dataList li .choice span{}
+.content .dataList li .che {
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+}
+
+.content .dataList li .choice span {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url(../img/noPick.png);
+}
+
+/*复选框被选中*/
+.content .dataList li .choice .pic {
+  background: url(../img/tick.png);
+}
+
+/*商品图片*/
+.content .dataList li .goods img {
+  height: 60px;
+}
+
+/*商品标题*/
+.content .dataList li .info .title p {
+  height: 40px;
+  line-height: 20px;
+  margin: 0;
+}
+
+/*商品价格*/
+.content .dataList li .info .title .price {
+  color: #F1286A;
+}
+
+.content .dataList li .info .title .price i {
+  font-style: normal;
+}
+
+.content .dataList li .num, .content .dataList li .del {
+  margin-top: 40px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+/*商品数量*/
+.content .dataList li .num {
+  border: solid #ccc 1px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .dataList li .num input:nth-child(n) {
+  flex: 1;
+  width: 100%;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+  background: #fff;
+  font-size: 12px;
+  border: none;
+  border-right: solid #ccc 1px;
+  box-sizing: border-box;
+}
+
+.content .dataList li .num input:nth-child(3) {
+  border: none;
+}
+
+/*支付方式选择提示框*/
+.payment {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  width: 40vw;
+  height: 40vw;
+  background: #fff;
+  border: solid 1px #ccc;
+  display: none;
+}
+
+.payment .del, .payment .weixin, .payment .alipay {
+  width: 100%;
+  height: 10vw;
+  position: relative;
+  border-bottom: dashed 1px #ccc;
+  line-height: 10vw;
+  padding-left: 3vw;
+  box-sizing: border-box;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.payment span {
+  position: absolute;
+  right: 3vw;
+  top: 1vw;
+  display: inline-block;
+  width: 8vw;
+  height: 8vw;
+  line-height: 8vw;
+  text-align: center;
+  border-radius: 2vw;
+}
+
+.payment .del span {
+  background: #e21a1a;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.payment .del span:hover {
+  opacity: 1;
+}
+
+/*脚部*/
+.footer {
+  border-top: 1px solid #8e488e;
+  color: white;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer div:nth-child(n) {
+  height: 54px;
+  line-height: 54px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.footer .allPick {
+  color: black;
+}
+
+.footer .allPick .col-xs-6 {
+  padding: 0;
+}
+
+.footer .allPick .choice {
+  position: relative;
+  /*复选框被选中*/
+}
+
+.footer .allPick .choice input:nth-child(n) {
+  position: absolute;
+}
+
+.footer .allPick .choice span {
+  position: absolute;
+  display: block;
+  top: 50%;
+  margin-top: -9px;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  background: url(../img/noPick.png);
+}
+
+.footer .allPick .choice .pic {
+  background: url(../img/tick.png);
+}
+
+.footer .allPick .choice .che {
+  z-index: 100;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  margin-top: -8px;
+  opacity: 0;
+}
+
+.footer .payMethod {
+  background: #dd3d97;
+}
+
+.footer .pay {
+  background: #8e488e;
+}
+
+.footer .pay a {
+  color: #fff;
+  text-decoration: none;
+}
