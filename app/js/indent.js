@@ -5,7 +5,6 @@ $(function(){
 	   
 	   var $Order_List = $('.order_list');
 	   if(indentgood.length){
-	   	    console.log(11)
 	   	    var all_num = 0;
 	   	    var all_price = 0; 
 	   	    var $goods_box = $('<li/>'); 

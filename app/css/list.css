@@ -65,10 +65,10 @@ ul {
   overflow: hidden;
 }
 
-.list_json span {
+.list_json .list_title{
   line-height: 38px;
+  color: #404040;
 }
-
 .list_json .json_1 {
   width: 100%;
   background: white;
@@ -76,14 +76,11 @@ ul {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
+.json_1  li{
+	box-sizing: border-box;
+}
 .list_json .json_li {
   width: 33%;
-}
-
-.list_json .json_a {
-  width: 100%;
-  height: 70px;
 }
 
 .list_json .img {
@@ -96,4 +93,5 @@ ul {
   text-align: center;
   width: 100%;
   display: block;
+  color: #404040;
 }

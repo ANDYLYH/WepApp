@@ -15,54 +15,6 @@ document.addEventListener("DOMContentLoaded",function(){
     	loop:true
     });
     
-//  //json数据加载
-//	var xhr=new XMLHttpRequest();
-//	
-//	xhr.onreadystatechange=function(){
-//		if(xhr.readyState === 4 && xhr.status === 200){
-//			var ele = JSON.parse(xhr.responseText);
-//			datalist = ele;
-//			
-//			var oindex_josn=document.querySelector(".index_json");
-//			var ul = document.createElement("ul");
-//			
-//			ele.forEach(function(item,idx){
-//				//创建节点
-//				var li = document.createElement('li');
-//				var img=document.createElement("img");
-//				var oexplain=document.createElement("p");
-//				var otitle=document.createElement("span");
-//				var ocontent=document.createElement("span");
-//				var oprice=document.createElement("p");
-//				
-//				//添加样式
-//				img.src=item.url;
-//				li.appendChild(img);
-//				
-//				otitle.innerHTML=item.title;
-//				ocontent.innerHTML=item.content;
-//				oprice.innerHTML=item.price;
-//				oprice.classList.add("price");
-//				
-//				//添加入页面
-//				oexplain.appendChild(otitle);
-//				oexplain.appendChild(ocontent);
-//				li.appendChild(oexplain);
-//				oexplain.classList.add("explain");
-//				
-//				li.appendChild(oprice);
-//				
-//				
-//				ul.appendChild(li);
-//			});
-//			//写入页面
-//			oindex_josn.appendChild(ul);
-//		}
-//	}
-//	xhr.open('get','data/index.json',true);
-//	xhr.send(null);
-
-
     //json数据加载
 	;$(function(){
 		//图片淡入效果
@@ -78,14 +30,15 @@ document.addEventListener("DOMContentLoaded",function(){
 						//创建节点
 						var $li=$("<li/>");
 						var $img=$("<img/>");
+						var $a = $('<a/>')
 						var $explain=$("<p/>");
 						var $title=$("<span/>");
 						var $content=$("<span/>");
 						var $price=$("<p/>");
 						//添加样式
 						//添加图片淡入效果
-						$img.attr({src:item.url}).attr({"data-original":item.url}).appendTo($li);
-		
+						$img.attr({src:item.url}).attr({"data-original":item.url}).appendTo($a);
+		                $a.attr({href:'html/list.html'}).appendTo($li);
 						$title.html(item.title).appendTo($explain);
 						$content.html(item.content).appendTo($explain);
 						$explain.addClass("explain").appendTo($li);
@@ -113,27 +66,5 @@ document.addEventListener("DOMContentLoaded",function(){
 		})
 		
 	});
-	
-	
-	
-	//回到顶部
-	window.onscroll=function(){
-		var obackToTop=document.querySelector(".backToTop");
-		var height=document.body.clientHeight/6;
-		//滚动条与浏览器顶部的距离
-		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;	
-		
-		if(scrollTop>height){
-			obackToTop.style.opacity=1;
-		}else{
-			obackToTop.style.opacity=0;
-		}
-	}
-//		var $index_json=$(".index_json");
-//	    $(function() {
-//			$("img").lazyload({effect:'fadeIn'});
-//			$index_json.find("img").attr({})
-//			$index_json.find("img").lazyload({ effect:'fadeIn'});
-//		});
 
 });
