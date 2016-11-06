@@ -1,57 +1,56 @@
-document.addEventListener('DOMContentLoaded',function(){
-                  $(function(){
-                
-                                    
-            	                                                  
-                           var indentgood = localStorage.getItem('dlist');
-                        	var inde  = JSON.parse(indentgood); 
-                              if(inde){
-                         for(var i=0;i<inde.length;i++){
-                              var ep = $('<p>店铺</p>');
-                              var espan = $('<span>交易成功</span>');
-                              var eimg = $('<img src="'+inde[i].image+'">');
-                              var ep2 = $('<p>'+inde[i].title+'</p>');
-                              var espan2=$('<span>'+inde[i].price+'</span>');
-                              var eh4 = $('<h4>x'+inde[i].num+'</h4>');
-                              var ep3 = $('<p>共'+inde[i].num+'商品，合计:￥'+inde[i].price+'</p>');
-                              var ea1 = $('<a>查看物流</a>').addClass('in_look');
-                              var ea2 = $('<a>删除</a>').addClass('in_del');
-                              var ea3 = $('<a>付款</a>').addClass('in_pay');
-                              var eshangping1 = $('<div/>').addClass('shangping1');
-                              var eshangping2 = $('<div/>').addClass('shangping2');
-                              var eshangping3 = $('<div/>').addClass('shangping3');
-                              var eshangping4 = $('<div/>').addClass('shangping4');   
-                              var eli = $("<li/>");         
-                              ep.appendTo(eshangping1);
-                              espan.appendTo(eshangping1);
-                              eimg.appendTo(eshangping2);
-                              ep2.appendTo(eshangping2);
-                              espan2.appendTo(eshangping2);
-                              eh4.appendTo(eshangping2);
-                              ep3.appendTo(eshangping3);
-                              ea1.appendTo(eshangping4);
-                              ea2.appendTo(eshangping4);
-                              ea3.appendTo(eshangping4);                
-                              eshangping1.appendTo(eli);
-                              eshangping2.appendTo(eli);
-                              eshangping3.appendTo(eli);
-                              eshangping4.appendTo(eli);
-                              eli.appendTo($('.in_ul1'));
-                        }  
-                              }else{
-                                    return;
-                              }
-                  
-                                    $('.in_del').on('tap',function(){
-                                                $(this).parent().parent().remove();
-                                                var xxx = $(this).index();
-                                                // console.log(xxx);
-                                                inde.splice(xxx-1,xxx);
-                                                // console.log(inde.splice(xxx-1,xxx));
-                                                console.log(inde.length);
-                                                var x1 = inde.slice(0,inde.length);
-                                                console.log(x1);
-                                                localStorage.setItem("dlist",JSON.stringify(x1));
-                                     })             
-                  })
+
+$(function(){
+	   //获取已付款的商品信息  
+	   var indentgood = localStorage.getItem('dlist')?JSON.parse(localStorage.getItem('dlist')):[];
+	   
+	   var $Order_List = $('.order_list');
+	   if(indentgood.length){
+	   	    console.log(11)
+	   	    var all_num = 0;
+	   	    var all_price = 0; 
+	   	    var $goods_box = $('<li/>'); 
+	   	    //头部  标题
+	   	    var etop1 = $('<p>店铺1</p>');
+          var etop2 = $('<span>交易成功</span>');
+          var $goods_content1 = $('<div/>').addClass('shangping1');
+          etop1.appendTo($goods_content1);
+          etop2.appendTo($goods_content1);
+          $goods_content1.appendTo($goods_box); 
+           //添加图片 ，标题 ， 单价 ，数量
+          for(var i = 0; i < indentgood.length ;i++){
+          	 var $goods_content2 = $('<div/>').addClass('shangping2');
+          	 $('<img src="'+indentgood[i].image+'">').appendTo($goods_content2);//商品图片
+             $('<p>'+indentgood[i].title+'</p>').appendTo($goods_content2);
+             $('<span>'+indentgood[i].price+'</span>').appendTo($goods_content2);
+             $('<h4>&times;'+indentgood[i].num+'</h4>').addClass('num_count').appendTo($goods_content2);
+             all_num += indentgood[i].num; //统计数量
+             all_price += indentgood[i].price*indentgood[i].num;//统计价格
+          	 $goods_content2.appendTo($goods_box); 
+          }
+     
+          //统计总价
+          var $goods_content3 = $('<div/>').addClass('shangping3');
+          $('<p>共'+all_num+'商品，合计:&yen;'+all_price+'</p>').appendTo($goods_content3);
+          $goods_content3.appendTo($goods_box); 
+
+          //底部  查看物流，删除，付款几个按钮
+          var $goods_content4 = $('<div/>').addClass('shangping4');
+          $('<a>查看物流</a>').appendTo($goods_content4);
+          $('<a class="order_del">删除</a>').appendTo($goods_content4);
+          $('<a>付款</a>').appendTo($goods_content4);
+          $goods_content4.appendTo($goods_box); 
+          
+          $goods_box.appendTo($Order_List);
+	   }else{
+	   	return;
+	   }
+	
+	  //删除订单
+    $('.order_del').on('singleTap',function(){
+            $(this).parent().parent().remove(); //删除点击下的li
+           var step_num = $(this).parent().parent().index();//获取索引
+           indentgood.splice(step_num,1);//删除对应的内容
+           localStorage.setItem("dlist",JSON.stringify(indentgood)); //重新设置订单剩下的内容
+         })      
+	
 })

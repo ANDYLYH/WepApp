@@ -9,10 +9,6 @@ document.addEventListener("DOMContentLoaded",function(){
 		//添加点击样式
 		$(this).addClass("li_active");
 	});
-	
-	$(".menudata").on('singleTap',function(){
-		$('.menu').toggle();
-	});
 });
 
 //json数据加载
@@ -34,7 +30,7 @@ document.addEventListener("DOMContentLoaded",function(){
 					
 					//将商品id存入本地存储
 					$a.on("touchstart",function(){
-						$(this).attr({id:"idname"}).attr({href:item.href}).addClass("json_a");
+						$(this).attr({href:item.href}).addClass("json_a");
 						var id=$(this).parent().index();
 						localStorage.setItem("id",id);
 					
@@ -53,19 +49,6 @@ document.addEventListener("DOMContentLoaded",function(){
 		//加载数据
 		$.ajax({url:"../data/listjson_1.json"});
 		
-//		//懒加载
-//		$(window).on("scroll", function() {
-//			$list_json=$(".list_json");
-//			var sum=$list_json.find("li").length;
-//			var scrollTop = $(window).scrollTop();
-//			if(scrollTop >= $(document).height() - $(window).height() - 400) {
-//				if(sum<100){
-//					$.ajax({url:"../data/listjson_1.json"});
-//				}
-//				
-//			}
-//		});
-		
 		//根据索引加载不同的数据
 		var $nav_list=$(".nav_list");
 		
@@ -75,17 +58,6 @@ document.addEventListener("DOMContentLoaded",function(){
 			
 			var index=$(this).index()+1;
 			$.ajax({url:"../data/listjson_"+index+".json"});
-			
-			//懒加载
-//			$(window).on("scroll", function() {
-//				var sum=$list_json.find("li").length;
-//				var scrollTop = $(window).scrollTop();
-//				if(scrollTop >= $(document).height() - $(window).height() - 400) {
-//					if(sum<100){
-//						$.ajax({url:"../data/listjson_"+index+".json"});
-//					}
-//				}
-//			});	
 			
 	})
         

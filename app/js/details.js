@@ -159,22 +159,5 @@
     		
     	}
     })
-    
-    $(window).on('scroll',function(){
-		var scrollTop = $(window).scrollTop();
-
-		//显示回到顶部按钮
-		if(scrollTop >= 500){
-			$('.scroll_top').show();
-		}else{
-			$('.scroll_top').hide();
-		}
-
-	});
-
-  //回到顶部
-   $('.scroll_top').on('singleTap',function(){
-		$('html,body').animate({'scrollTop':0});
-	});
 
  })

@@ -11,9 +11,8 @@ document.addEventListener('DOMContentLoaded',function(){
 	//头部做菜单栏的隐藏及显示
 	$('.header_top .h_logo').eq(1).on('singleTap',function(){
 		$('.menu').toggle();
-		console.log(111);
-		
 	})
+
 	
 	//高亮
 	gaoliang();
@@ -84,4 +83,23 @@ document.addEventListener('DOMContentLoaded',function(){
                    }
 
 	})
+     
+    //滚动事件  回到顶部图标的显示及显示   
+    $(window).on('scroll',function(){
+		var scrollTop = $(window).scrollTop();
+
+		//显示回到顶部按钮
+		if(scrollTop >= 800){
+			$('.scroll_top').show();
+		}else{
+			$('.scroll_top').hide();
+		}
+
+	});
+
+  //回到顶部
+   $('.scroll_top').on('singleTap',function(){
+		$('html,body').animate({'scrollTop':0},1000);
+	});
+   
 })

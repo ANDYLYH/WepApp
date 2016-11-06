@@ -15,9 +15,30 @@ ul, li {
 a {
   text-decoration: none;
 }
-.in_ul1{
-  margin-bottom:60px;
+
+/*导航栏*/
+.order_content {
+  width: 100%;
+  background-color: #f1f5f6;
+  overflow: hidden;
 }
+
+.order_content nav {
+  display: flex;
+  background-color: #f1f5f6;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.order_content nav a {
+  flex: 1;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 12px;
+  color: #000;
+  border-right: 1px solid #ccc;
+}
+.order_content nav a:nth-child(5){border: none;}
 
 .cd {
   display: flex;
@@ -35,27 +56,32 @@ a {
   font-size: 20px;
 }
 
-ul li {
+.order_list{
+  margin-bottom:60px;
   /*background-color: #fff;*/
-  width: 100%;
-  /*margin-bottom: 10px;*/
 }
 
-ul li .shangping1 {
+.order_list li {
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.order_list li .shangping1 {
   width: 100%;
   height: 37px;
   border-bottom: 1px solid #ccc;
   overflow: hidden;
 }
 
-ul li .shangping1 p {
+.order_list li .shangping1 p {
   line-height: 37px;
   font-size: 12px;
   float: left;
   margin-left: 10px;
 }
 
-ul li .shangping1 span {
+.order_list li .shangping1 span {
   font-size: 12px;
   line-height: 37px;
   margin-right: 10px;
@@ -63,14 +89,14 @@ ul li .shangping1 span {
   color: #ed369b;
 }
 
-ul li .shangping2 {
+.order_list li .shangping2 {
   height: 95px;
   width: 100%;
   border-bottom: 1px solid #ccc;
   overflow: hidden;
 }
 
-ul li .shangping2 img {
+.order_list li .shangping2 img {
   float: left;
   height: 75px;
   margin-left: 10px;
@@ -78,12 +104,12 @@ ul li .shangping2 img {
   margin-right: 20px;
 }
 
-ul li .shangping2 p {
+.order_list li .shangping2 p {
   font-size: 12px;
   line-height: 48px;
 }
 
-ul li .shangping2 span {
+.order_list li .shangping2 span {
   font-size: 12px;
   color: #f377bb;
   float: left;
@@ -91,77 +117,42 @@ ul li .shangping2 span {
   margin-top: 10px;
 }
 
-ul li .shangping2 h4 {
+.order_list li .shangping2 .num_count {
   float: right;
   font-size: 12px;
   margin-top: 20px;
   margin-right: 10px;
 }
 
-ul li .shangping3 {
+.order_list li .shangping3 {
   width: 100%;
   height: 37px;
   border-bottom: 1px solid #ccc;
   overflow: hidden;
 }
 
-ul li .shangping3 p {
+.order_list li .shangping3 p {
   float: right;
   line-height: 37px;
   color: #464646;
   margin-right: 10px;
-  font-size: 12px;
+  font-size: 0.75em;
 }
 
-ul li .shangping4 {
+.order_list li .shangping4 {
   width: 100%;
   height: 37px;
   overflow: hidden;
 }
 
-ul li .shangping4 .in_pay {
+.order_list li .shangping4 a:nth-child(n) {
   display: block;
-  padding: 2px 3px 2px 3px;
+  padding: 4px 6px;
   border: 1px solid #ccc;
   font-size: 12px;
   float: right;
   margin-top: 10px;
   margin-right: 10px;
-}
-
-ul li .shangping4 .in_del {
-  display: block;
-  padding: 2px 3px 2px 3px;
-  border: 1px solid #ccc;
-  font-size: 12px;
-  float: right;
-  margin-top: 10px;
-  margin-right: 10px;
-}
-
-ul li .shangping4 .in_look {
-  display: block;
-  padding: 2px 3px 2px 3px;
-  border: 1px solid #ccc;
-  font-size: 12px;
-  float: right;
-  margin-top: 10px;
-  margin-right: 10px;
-}
-
-aside {
-  width: 100%;
-}
-
-aside nav {
-  height: 48px;
-  display: flex;
-  background-color: #f1f5f6;
-}
-
-aside nav a {
-  flex: 1;
-  text-align: center;
-  line-height: 48px;
-  font-size: 12px;
+  color: #000000;
+  border-radius: 5px;
 }

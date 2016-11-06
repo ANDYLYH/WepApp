@@ -162,7 +162,7 @@
                          if(parseInt(allpay.html()) !== 0){
                          	   var dingdan ={};
                        
-                          var Dlist= [];
+                          var Dlist= localStorage.getItem('dlist')?JSON.parse(localStorage.getItem('dlist')):[];
                    
                           var hwlist = localStorage.getItem('GoodsData')?JSON.parse(localStorage.getItem('GoodsData')):[];
                           var hwlist1 = localStorage.getItem('GoodsData')?JSON.parse(localStorage.getItem('GoodsData')):[];
@@ -180,9 +180,9 @@
                                localStorage.setItem("dlist",JSON.stringify(Dlist));
                                localStorage.setItem("GoodsData",JSON.stringify(hwlist1));
    
-		      window.location = 'indent.html';
+		                       window.location = 'indent.html'; //跳转到我的订单
                          }else{
-                         	      window.location = 'indent.html';
+                         	      window.location = 'indent.html';//跳转到我的订单
                          }
                          
 	})
