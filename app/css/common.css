@@ -13,7 +13,7 @@ a{text-decoration:none;}
   display: none;
   width: 124px;
   height: 228px;
-  position: absolute;
+  position: fixed;
   background: rgba(0, 0, 0, 0.6);
   color: red;
   border-radius: 5px;

@@ -47,8 +47,8 @@ $(function(){
 	  //删除订单
     $('.order_del').on('singleTap',function(){
             $(this).parent().parent().remove(); //删除点击下的li
-           var step_num = $(this).parent().parent().index();//获取索引
-           indentgood.splice(step_num,1);//删除对应的内容
+//         var step_num = $(this).parent().parent().index();//获取索引
+           indentgood.splice(0,indentgood.length);//删除对应的内容
            localStorage.setItem("dlist",JSON.stringify(indentgood)); //重新设置订单剩下的内容
          })      
 	
