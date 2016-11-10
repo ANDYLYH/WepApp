@@ -1,4 +1,4 @@
-;$(function($){
+﻿;$(function($){
 	var $datalist = $('.dataList');
 	//读取本地存储
 	var goodlist = localStorage.getItem('GoodsData');
@@ -162,7 +162,7 @@
                          if(parseInt(allpay.html()) !== 0){
                          	   var dingdan ={};
                        
-                          var Dlist= localStorage.getItem('dlist')?JSON.parse(localStorage.getItem('dlist')):[];
+                          var Dlist=[];
                    
                           var hwlist = localStorage.getItem('GoodsData')?JSON.parse(localStorage.getItem('GoodsData')):[];
                           var hwlist1 = localStorage.getItem('GoodsData')?JSON.parse(localStorage.getItem('GoodsData')):[];
