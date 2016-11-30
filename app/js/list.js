@@ -1,4 +1,4 @@
-
+﻿
 	$(function(){
 		//导航栏点击事件
 		var $nav_list=$(".nav_list");
@@ -34,6 +34,7 @@
     	$.ajax({
     		type:"get",
     		url:"../data/listjson_"+num+".json",
+                dataType:"json",
     		success:function(res){
     			res.forEach(function(item,idx){
 					var $li=$("<li/>");

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded",function(){
+﻿document.addEventListener("DOMContentLoaded",function(){
 	
   	//轮播图S
     var swiper = new Swiper('.swiper-container', {
@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded",function(){
 			
 			$.ajaxSetup({
 				url:"data/index.json",
+                                dataType:"json",
 				success:function(ele){
 					ele.forEach(function(item,idx){
 						//创建节点

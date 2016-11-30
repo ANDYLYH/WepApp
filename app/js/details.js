@@ -125,8 +125,8 @@
 		 	})
  	//点击切换
     $btnChanges.on('singleTap',function(){
-        if($(this).is('.active'){
-         return;}
+       if($(this).is('.active')){
+            return;}
     	flag =!flag;
     	var index = $(this).index();  //获取下标
     	$(this).addClass('active').siblings('a').removeClass('active');

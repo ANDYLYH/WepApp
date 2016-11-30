@@ -1,4 +1,4 @@
-
+﻿
 $(function(){
 	   //获取已付款的商品信息  
 	   var indentgood = localStorage.getItem('dlist')?JSON.parse(localStorage.getItem('dlist')):[];
@@ -20,7 +20,7 @@ $(function(){
           	 var $goods_content2 = $('<div/>').addClass('shangping2');
           	 $('<img src="'+indentgood[i].image+'">').appendTo($goods_content2);//商品图片
              $('<p>'+indentgood[i].title+'</p>').appendTo($goods_content2);
-             $('<span>'+indentgood[i].price+'</span>').appendTo($goods_content2);
+             $('<span>&yen;'+indentgood[i].price+'</span>').appendTo($goods_content2);
              $('<h4>&times;'+indentgood[i].num+'</h4>').addClass('num_count').appendTo($goods_content2);
              all_num += indentgood[i].num; //统计数量
              all_price += indentgood[i].price*indentgood[i].num;//统计价格
